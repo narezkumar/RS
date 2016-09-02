@@ -10,11 +10,21 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var spinnerView: ResizableSpinner!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        self.setupSpinner()
+
     }
 
+    //    MARK: -Setup Methods
+    func setupSpinner() {
+        self.spinnerView.strokeColor = UIColor.redColor()
+        self.spinnerView.lineWidth = CGFloat(2)
+        self.spinnerView.startAnimating()
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
